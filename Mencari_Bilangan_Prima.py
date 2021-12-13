@@ -26,3 +26,5 @@ print(f'bilangan prima antara {awal} dan {akhir} adalah :', hasil)
 print("Total bilangan prima adalah :", jumlah_prima)
 print("Hai saya sedang mencoba git")
 print("hallo")
+for i in range (30):
+  print("hai")
