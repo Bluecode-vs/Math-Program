@@ -104,7 +104,7 @@ def menu(koneksi):
     print("6. exit")
     menu = int(input("Pilih memu : "))
 
-    # Clear screen
+    # Clear screen, digunakan ketika selesai pilih menu terminal akan di bersihkan otomatis
     os.system("cls")
 
     if menu == 1:
