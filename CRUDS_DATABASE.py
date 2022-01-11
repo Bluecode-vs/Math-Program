@@ -79,14 +79,14 @@ def delete_data(koneksi):
 
 def cari_data(koneksi):
     crs = koneksi.cursor()
-    kode = input("Masukan Kata kunci : ")
+    kode = str(input("Masukan Kata kunci : "))
 
-    isi_data = "Select * from pelanggan where nama like %s or alamat like %s"
-    cari  = ("%{}%".format(kode), "%{}%".format(kode))
-    crs.execute(isi_data, cari)
+    isi_data = "Select * from pelanggan where nama like %s or alamat like %s or kode like %s"
+    cari  = ("%{0}%".format(kode), "%{0}%".format(kode), "%{0}%".format(kode))
+    crs.execute(isi_data, cari )
     hasil = crs.fetchall()
 
-    if crs.rowcount < 0:
+    if crs.rowcount <= int(0):
         print("Data tidak ada")
     else:
         for i in hasil:
